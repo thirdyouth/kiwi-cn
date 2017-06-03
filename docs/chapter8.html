@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第八章：系统解析和导入 &mdash; KIWI 0.9 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="KIWI 0.9 文档" href="index.html"/>
+        <link rel="up" title="第二部分：使用示例" href="part2.html"/>
+        <link rel="next" title="第九章：ISO 镜像/ Live 系统" href="chapter9.html"/>
+        <link rel="prev" title="第七章：操作系统镜像管理" href="chapter7.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> KIWI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="part1.html">第一部分：基础概要</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">第一章：介绍</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#kiwi">KIWI 是什么？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#id2">KIWI 用来做什么？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#id3">KIWI 怎么使用？</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">第二章：安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#kiwi">安装 KIWI 包</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter2.html#id2">安装最新可用版本</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#id3">从源码安装运行</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">第三章：基本工作流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id2">构建镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id3">构建过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id5">启动过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id6">启动镜像钩子脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id7">启动镜像定制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id8">启动参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id9">常规和发行制定代码</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4.html">第四章：镜像缓存</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter4.html#id2">镜像缓存介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4.html#id3">镜像缓存使用示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5.html">第五章：KIWI 镜像描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter5.html#config-xml">config.xml 文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#image">image 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#description">description 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#profiles">profiles 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#preferences">preferences 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#users">users 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#drivers">drivers 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#repository">repository 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#packages">packages 元素</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter6.html">第六章：使用 KIWI 创建用例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#id1">用例创建概览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#id2">KIWI 模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#id3">跨平台应用构建</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="part2.html">第二部分：使用示例</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter7.html">第七章：操作系统镜像管理</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">第八章：系统解析和导入</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">创建干净的仓库集合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">查看定制文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checklist">Checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">转换为镜像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter9.html">第九章：ISO 镜像/ Live 系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#live-jeos">构建 Live JeOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#flavours">Flavours</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#id2">分离模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#id3">混合模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#usb">USB 启动镜像</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#iso">ISO 混合模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#oem-usb">OEM USB 模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter10.html">第十章：VMX 镜像/虚拟磁盘</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter10.html#jeos">构建 JeOS 磁盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter10.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter10.html#flavours">Flavours</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter10.html#vmware">VMware 支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter10.html#lvm">LVM 支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter10.html#id2">扩展启动盘</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11.html">第十一章：Linux 容器和 Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11.html#docker">构建 Docker 镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11.html#id2">镜像配置细节</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12.html">第十二章：Vagrant Boxes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#box">构建基础 Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#id1">Box 配置细节</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#id2">使用 Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#vagrant-docker">使用 Vagrant Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter13.html">第十三章：PXE 镜像/瘦客户端</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#id1">设置所需要服务</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#atftp">Atftp 服务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#dhcp">DHCP 服务</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#pxe-jeos">构建 PXE JeOS 文件系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#id2">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#flavours">Flavours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#id3">硬件分组</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#id4">分组配置文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#id5">分组细节文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#id6">使用硬件映射提供重载</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter14.html">第十四章：OEM 镜像/预装系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter14.html#oem-dvd">构建 OEM 系统 DVD 安装光盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter14.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter14.html#flavours">Flavours</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id2">指定 OEM 安装过程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id3">OEM 分区</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id4">分区安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id5">网络安装</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter15.html">第十五章：Xen Para- 和完全虚拟镜像</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#dom0">构建 Dom0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#id1">使用 Dom0 镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#para-xen">构建 Para 虚拟 Xen 客户机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#full-xen">构建 Full 虚拟 Xen 客户机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#id2">使用客户机镜像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter16.html">第十六章：KIWI RAID 支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter17.html">第十七章：KIWI 定制分区</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter17.html#lvm">基于 LVM 定制分区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter17.html#btrfs">基于 Btrfs 定制分区</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter18.html">第十八章：KIWI 加密支持</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">附录：KIWI 操作手册页</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#id1">kiwi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id2">kiwi 概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id3">kiwi 基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id4">kiwi 常用参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id5">kiwi 镜像准备和创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id6">kiwi 镜像升级</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id7">kiwi 系统分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id8">kiwi 镜像后处理模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id9">kiwi 镜像格式转换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id10">kiwi 辅助工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id11">kiwi 全局参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id12">kiwi 镜像准备参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id13">kiwi 镜像升级/准备参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id14">kiwi 镜像创建参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id15">kiwi 更多信息</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#kiwi-config-sh">kiwi::config.sh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#config-sh">config.sh 描述</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="appendix.html#a-1-config-sh">示例 A.1. config.sh 模板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id16">config.sh 常用功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#id17">config.sh 配置环境变量</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#kiwi-images-sh">kiwi::images.sh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendix.html#images-sh">images.sh 描述</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html#kiwi-kiwirc">kiwi::kiwirc</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">KIWI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="part2.html">第二部分：使用示例</a> &raquo;</li>
+      
+    <li>第八章：系统解析和导入</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/chapter8.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="id1">
+<h1>第八章：系统解析和导入<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>创建干净的仓库集合<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>查看定制文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="checklist">
+<h2>Checklist<a class="headerlink" href="#checklist" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>转换为镜像<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter9.html" class="btn btn-neutral float-right" title="第九章：ISO 镜像/ Live 系统" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter7.html" class="btn btn-neutral" title="第七章：操作系统镜像管理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2015, Marcus Schäfer.
+      最后更新于 Jun 03, 2017.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

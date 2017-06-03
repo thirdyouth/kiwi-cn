@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>附录：KIWI 操作手册页 &mdash; KIWI 0.9 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="KIWI 0.9 文档" href="index.html"/>
+        <link rel="prev" title="第十八章：KIWI 加密支持" href="chapter18.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> KIWI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="part1.html">第一部分：基础概要</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">第一章：介绍</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#kiwi">KIWI 是什么？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#id2">KIWI 用来做什么？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#id3">KIWI 怎么使用？</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">第二章：安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#kiwi">安装 KIWI 包</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter2.html#id2">安装最新可用版本</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#id3">从源码安装运行</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">第三章：基本工作流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id2">构建镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id3">构建过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id5">启动过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id6">启动镜像钩子脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id7">启动镜像定制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id8">启动参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#id9">常规和发行制定代码</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4.html">第四章：镜像缓存</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter4.html#id2">镜像缓存介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4.html#id3">镜像缓存使用示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5.html">第五章：KIWI 镜像描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter5.html#config-xml">config.xml 文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#image">image 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#description">description 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#profiles">profiles 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#preferences">preferences 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#users">users 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#drivers">drivers 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#repository">repository 元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter5.html#packages">packages 元素</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter6.html">第六章：使用 KIWI 创建用例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#id1">用例创建概览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#id2">KIWI 模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#id3">跨平台应用构建</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part2.html">第二部分：使用示例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter7.html">第七章：操作系统镜像管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter8.html">第八章：系统解析和导入</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter8.html#id2">创建干净的仓库集合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter8.html#id3">查看定制文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter8.html#checklist">Checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter8.html#id4">转换为镜像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter9.html">第九章：ISO 镜像/ Live 系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#live-jeos">构建 Live JeOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#flavours">Flavours</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#id2">分离模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#id3">混合模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter9.html#usb">USB 启动镜像</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#iso">ISO 混合模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter9.html#oem-usb">OEM USB 模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter10.html">第十章：VMX 镜像/虚拟磁盘</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter10.html#jeos">构建 JeOS 磁盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter10.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter10.html#flavours">Flavours</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter10.html#vmware">VMware 支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter10.html#lvm">LVM 支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter10.html#id2">扩展启动盘</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11.html">第十一章：Linux 容器和 Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11.html#docker">构建 Docker 镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11.html#id2">镜像配置细节</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12.html">第十二章：Vagrant Boxes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#box">构建基础 Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#id1">Box 配置细节</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#id2">使用 Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12.html#vagrant-docker">使用 Vagrant Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter13.html">第十三章：PXE 镜像/瘦客户端</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#id1">设置所需要服务</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#atftp">Atftp 服务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#dhcp">DHCP 服务</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#pxe-jeos">构建 PXE JeOS 文件系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#id2">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#flavours">Flavours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter13.html#id3">硬件分组</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#id4">分组配置文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#id5">分组细节文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter13.html#id6">使用硬件映射提供重载</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter14.html">第十四章：OEM 镜像/预装系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter14.html#oem-dvd">构建 OEM 系统 DVD 安装光盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter14.html#id1">使用镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter14.html#flavours">Flavours</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id2">指定 OEM 安装过程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id3">OEM 分区</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id4">分区安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter14.html#id5">网络安装</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter15.html">第十五章：Xen Para- 和完全虚拟镜像</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#dom0">构建 Dom0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#id1">使用 Dom0 镜像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#para-xen">构建 Para 虚拟 Xen 客户机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#full-xen">构建 Full 虚拟 Xen 客户机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15.html#id2">使用客户机镜像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter16.html">第十六章：KIWI RAID 支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter17.html">第十七章：KIWI 定制分区</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter17.html#lvm">基于 LVM 定制分区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter17.html#btrfs">基于 Btrfs 定制分区</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter18.html">第十八章：KIWI 加密支持</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">附录：KIWI 操作手册页</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">kiwi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">kiwi 概要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">kiwi 基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">kiwi 常用参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">kiwi 镜像准备和创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">kiwi 镜像升级</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">kiwi 系统分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">kiwi 镜像后处理模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">kiwi 镜像格式转换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">kiwi 辅助工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">kiwi 全局参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">kiwi 镜像准备参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">kiwi 镜像升级/准备参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">kiwi 镜像创建参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">kiwi 更多信息</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kiwi-config-sh">kiwi::config.sh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#config-sh">config.sh 描述</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-1-config-sh">示例 A.1. config.sh 模板</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">config.sh 常用功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">config.sh 配置环境变量</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kiwi-images-sh">kiwi::images.sh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#images-sh">images.sh 描述</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kiwi-kiwirc">kiwi::kiwirc</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">KIWI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>附录：KIWI 操作手册页</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/appendix.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="kiwi">
+<h1>附录：KIWI 操作手册页<a class="headerlink" href="#kiwi" title="永久链接至标题">¶</a></h1>
+<p>本节内容将会提供 KIWI 的 man 手册页，以及 <code class="file docutils literal"><span class="pre">config.sh</span></code> 和 <code class="file docutils literal"><span class="pre">index.sh</span></code> 中可以使用的函数。</p>
+<div class="section" id="id1">
+<h2>kiwi<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>kiwi — 用于创建操作系统镜像</p>
+<div class="section" id="id2">
+<h3>kiwi 概要<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> -l <span class="p">|</span> --list <span class="o">}</span>
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> -o <span class="p">|</span> --clone <span class="o">}</span> image-path <span class="o">{</span> -d <span class="o">}</span> destination
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> -b <span class="p">|</span> --build <span class="o">}</span> image-path <span class="o">{</span> -d <span class="o">}</span> destination
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>kiwi 基础<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id4">
+<h3>kiwi 常用参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id5">
+<h3>kiwi 镜像准备和创建<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p class="first">镜像准备：</p>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> -p <span class="p">|</span> --prepare <span class="o">}</span> image-path
+<span class="o">{</span> -r <span class="p">|</span> --root <span class="o">}</span> image-root <span class="o">[</span>--cache directory<span class="o">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">镜像创建：</p>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> -c <span class="p">|</span> --create <span class="o">}</span> image-root
+<span class="o">{</span> -d <span class="p">|</span> --destdir <span class="o">}</span> destination <span class="o">[</span>--type image-type<span class="o">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>kiwi 镜像升级<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> -u <span class="p">|</span> --upgrade <span class="o">}</span> image-root <span class="o">[</span>--add-package name<span class="o">]</span> <span class="o">[</span>--add-pattern name<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>kiwi 系统分析<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi <span class="o">{</span> --describe <span class="o">}</span> name
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>kiwi 镜像后处理模式<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>镜像后处理模式用于特殊镜像部署任务，如镜像安装到 U 盘。因此可以将这一步成为准备和创建之后的第三步。KIWI 根据指定的输出镜像类型和属性自动调用后处理模块，但是也可以通过手动调用处理。</p>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --bootvm initrd --bootvm-system systemImage <span class="o">[</span>--bootvm-disksize size<span class="o">]</span>
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --bootcd initrd
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --bootusb initrd
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --installcd initrd --installcd-system raw-system-image
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --installstick initrd --installstick-system raw-system-image
+</pre></div>
+</div>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --installpxe initrd --installpxe-system raw-system-image
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>kiwi 镜像格式转换<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>KIWI 格式转换对于其他镜像格式的创建非常有用，例如,用于 VMware 的 vmdk，或者开放虚拟机格式 ovf。在进行转换时，如果在 XML 描述中存在机器部分说明，KIWI 也会根据不同格式，创建相应的虚拟机配置。</p>
+<div class="highlight-shell"><div class="highlight"><pre>kiwi --convert systemImage <span class="o">[</span>--format vmdk<span class="p">|</span>ovf<span class="p">|</span>qcow2<span class="p">|</span>vhd<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>kiwi 辅助工具<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3>kiwi 全局参数<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3>kiwi 镜像准备参数<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id13">
+<h3>kiwi 镜像升级/准备参数<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id14">
+<h3>kiwi 镜像创建参数<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="id15">
+<h3>kiwi 更多信息<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>有关 KIWI 更多信息，可以参考如下文件：</p>
+<ul class="simple">
+<li><a class="reference external" href="http://en.opensuse.org/Portal:KIWI">http://en.opensuse.org/Portal:KIWI</a> ， KIWI维基页面。</li>
+<li><code class="file docutils literal"><span class="pre">config.xml</span></code> ，XML 配置文件，包含了镜像创建的各个方面。</li>
+<li><code class="file docutils literal"><span class="pre">file:///usr/share/doc/packages/kiwi/kiwi.pdf</span></code> ，系统文档，描述了镜像类型支持的详细信息。</li>
+<li><code class="file docutils literal"><span class="pre">file:///usr/share/doc/packages/kiwi/schema/kiwi.xsd.html</span></code> ，KIWI RELAX NG XML 格式规范文档。</li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-config-sh">
+<h2>kiwi::config.sh<a class="headerlink" href="#kiwi-config-sh" title="永久链接至标题">¶</a></h2>
+<p>KIWI::config.sh — KIWI 镜像描述定制文件</p>
+<div class="section" id="config-sh">
+<h3>config.sh 描述<a class="headerlink" href="#config-sh" title="永久链接至标题">¶</a></h3>
+<p>KIWI 镜像描述允许使用可选的 <code class="file docutils literal"><span class="pre">config.sh</span></code> bash 脚本。该脚本可用于从给定的未打包镜像创建的所有镜像进行合理的改动（因为 config.sh 在创建步骤开始之前运行）。基本上，该脚本设计用于添加镜像的操作系统配置。这里的配置是指，操作系统安装过程中仅执行一次的所有任务，如激活服务程序，创建配置文件，准备首次启动工作流程环境，等等。<code class="file docutils literal"><span class="pre">config.sh</span></code> 脚本在下述 kiwi 内置配置任务之后调用：用户/用户组，复制重载根目录，和 autoyast 设置，如果 <code class="file docutils literal"><span class="pre">config.sh</span></code> 以非 0 代码退出，kiwi 进程也将会失败退出。</p>
+<div class="section" id="a-1-config-sh">
+<h4>示例 A.1. config.sh 模板<a class="headerlink" href="#a-1-config-sh" title="永久链接至标题">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre>#======================================
+# Functions...
+#--------------------------------------
+test -f /.kconfig &amp;&amp; . /.kconfig
+test -f /.profile &amp;&amp; . /.profile
+
+#======================================
+# Greeting...
+#--------------------------------------
+echo &quot;Configure image: [$kiwi_iname]...&quot;
+
+#======================================
+# Mount system filesystems
+#--------------------------------------
+baseMount
+
+#======================================
+# Call configuration code/functions
+#--------------------------------------
+
+#======================================
+# Umount kernel filesystems
+#--------------------------------------
+baseCleanMount
+
+#======================================
+# Exit safely
+#--------------------------------------
+exit 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>config.sh 常用功能<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p><code class="file docutils literal"><span class="pre">.kconfig</span></code> 文件允许使用常见函数集。SUSE 独有的功能函数前缀为 <em>suse</em> 。对所有 Linux 系统适用的功能函数前缀为 <em>base</em> 。下属列表描述了 <code class="file docutils literal"><span class="pre">config.sh</span></code> 脚本内可用的功能函数。</p>
+<ul>
+<li><p class="first">[baseCleanMount]</p>
+<p>卸载系统文件系统 <code class="file docutils literal"><span class="pre">/proc</span></code> ，<code class="file docutils literal"><span class="pre">/dev/pts</span></code> ，和 <code class="file docutils literal"><span class="pre">/sys</span></code> 。</p>
+</li>
+<li><p class="first">[baseDisableCtrlAltDel]</p>
+<p>在 <code class="file docutils literal"><span class="pre">/etc/inittab</span></code> 文件中禁用 <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Del</span></code> 组合按键。</p>
+</li>
+<li><p class="first">[baseGetPackagesForDeletion]</p>
+<p>返回将被删除的包名称。</p>
+</li>
+<li><p class="first">[baseGetProfilesUsed]</p>
+<p>返回用于构建镜像的配置文件名称。</p>
+</li>
+<li><p class="first">[baseSetRunlevel {value}]</p>
+<p>设置默认运行级别。</p>
+</li>
+<li><p class="first">[baseSetupBoot]</p>
+<p>设置 <code class="file docutils literal"><span class="pre">linuxrc</span></code> 作为 init 初始化程序。</p>
+</li>
+<li><p class="first">[baseSetupBusyBox {-f}]</p>
+<p>激活 busybox，如果从 <code class="file docutils literal"><span class="pre">busybox/busybox.links</span></code> 文件安装所有符号链接，您使用 <code class="xref std std-option docutils literal"><span class="pre">-f</span></code> 参数强制选择指定程序进入 busybox ，例如：</p>
+<div class="highlight-shell"><div class="highlight"><pre>baseSetupBusyBox -f /bin/zcat /bin/vi
+</pre></div>
+</div>
+</li>
+<li><p class="first">[baseSetupInPlaceGITRepository]</p>
+<p>为根目录创建相应的 git 仓库。该过程需要一些时间，并且可能遇到一些二进制数据处理有关和的问题。</p>
+</li>
+<li><p class="first">[baseSetupInPlaceSVNRepository {path_list}]</p>
+<p>为指定目录创建相应的 svn 仓库。标准的调用方式如下：</p>
+<div class="highlight-shell"><div class="highlight"><pre>baseSetupInPlaceSVNRepository /etc /srv /var/log
+</pre></div>
+</div>
+</li>
+<li><p class="first">[baseSetupPlainTextGITRepository]</p>
+<p>创建根目录的 git 仓库，只包含所有的普通文本文件。</p>
+</li>
+<li><p class="first">[baseSetupUserPermissions]</p>
+<p>查询 <code class="file docutils literal"><span class="pre">/etc/passwd</span></code> 中列出的所有用户的 home 目录，并修改其中所有文件的属主为相应的用户和用户组。</p>
+</li>
+<li><p class="first">[baseStripAndKeep {list of info-files to keep}]</p>
+<p>strip* 相关功能函数的辅助函数，读取文件的 stdin 行，检查需要删除的参数：那些文件需要保留。</p>
+</li>
+<li><p class="first">[baseStripDocs {list of docu names to keep}]</p>
+<p>删除参数内指定保留文档之外的所有其他文档。</p>
+</li>
+<li><p class="first">[baseStripInfos {list of info-files to keep}]</p>
+<p>删除参数内指定 info 文件之外的其他 info 文件。</p>
+</li>
+<li><p class="first">[baseStripLocales {list of locales}]</p>
+<p>删除参数内指定的本地化配置之外的其他本地化配置。</p>
+</li>
+<li><p class="first">[baseStripMans {list of manpages to keep}]</p>
+<p>删除参数内指定的程序手册页之外的其他程序手册页，例如： baseStripMans more less</p>
+</li>
+<li><p class="first">[baseStripRPM]</p>
+<p>删除 <code class="file docutils literal"><span class="pre">config.xml</span></code> 配置文件中 type=delete 部分中定义的 rpm 包。</p>
+</li>
+<li><p class="first">[suseRemovePackagesMarkedForDeletion]</p>
+</li>
+<li><p class="first">[baseStripTools {list of toolpath} {list of tools}]</p>
+</li>
+<li><p class="first">[baseStripUnusedLibs]</p>
+</li>
+<li><p class="first">[baseUpdateSysConfig {filename} {variable} {value}]</p>
+</li>
+<li><p class="first">[Debug {message}]</p>
+</li>
+<li><p class="first">[Echo {echo commandline}]</p>
+</li>
+<li><p class="first">[Rm {list of files}]</p>
+</li>
+<li><p class="first">[Rpm {rpm commandline}]</p>
+</li>
+<li><p class="first">[suseConfig]</p>
+</li>
+<li><p class="first">[suseInsertService {servicename}]</p>
+</li>
+<li><p class="first">[suseRemoveService {servicename}]</p>
+</li>
+<li><p class="first">[baseInsertService {servicename}]</p>
+</li>
+<li><p class="first">[baseRemoveService {servicename}]</p>
+</li>
+<li><p class="first">[baseService {servicename} {on|off}]</p>
+</li>
+<li><p class="first">[suseActivateDefaultServices]</p>
+</li>
+<li><p class="first">[suseSetupProduct]</p>
+</li>
+<li><p class="first">[suseSetupProductInformation]</p>
+</li>
+<li><p class="first">[suseStripPackager {-a}]</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h3>config.sh 配置环境变量<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<p><code class="file docutils literal"><span class="pre">.profile</span></code> 环境文件包含了下述的环境参数设置，上述的一些功能函数将会用到这些变量。</p>
+<ul>
+<li><p class="first">[$kiwi_compressed]</p>
+<p>该变量所赋的值是 <code class="file docutils literal"><span class="pre">config.xml</span></code> 文件中 <strong>type</strong> 元素中的压缩属性。</p>
+</li>
+<li><p class="first">[$kiwi_delete]</p>
+<p>该变量中的所有包是 <code class="file docutils literal"><span class="pre">config.xml</span></code> 文件中 <strong>type=&#8221;delete&#8221;</strong> 部分所指定包的部分列表。</p>
+</li>
+<li><p class="first">[$kiwi_drivers]</p>
+<p>该变量定义一个以逗号分割的驱动程序列表，用于 <code class="file docutils literal"><span class="pre">config.xml</span></code> 文件中 <strong>drivers</strong> 部分。</p>
+</li>
+<li><p class="first">[$kiwi_iname]</p>
+<p>该变量定义 <code class="file docutils literal"><span class="pre">config.xml</span></code> 所列出的镜像名称。</p>
+</li>
+<li><p class="first">[$kiwi_iversion]</p>
+<p>该变量定义镜像版本字符串，如 major.minor.release</p>
+</li>
+<li><p class="first">[$kiwi_keytable]</p>
+<p>The contents of the keytable setup as done in config.xml</p>
+</li>
+<li><p class="first">[$kiwi_language]</p>
+<p>The contents of the locale setup as done in config.xml</p>
+</li>
+<li><p class="first">[$kiwi_profiles]</p>
+<p>A list of profiles used to build this image</p>
+</li>
+<li><p class="first">[$kiwi_size]</p>
+<p>The predefined size value for this image. This is not the computed size but only the optional size value of the preferences section in config.xml</p>
+</li>
+<li><p class="first">[$kiwi_timezone]</p>
+<p>The contents of the timezone setup as done in config.xml</p>
+</li>
+<li><p class="first">[$kiwi_type]</p>
+<p>The basic image type. Can be a simply filesystem image type of ext2, ext3, reiserfs, squashfs, cpio, or one of the following complex image types: iso, split, usb, vmx, oem, xen, or pxe.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="kiwi-images-sh">
+<h2>kiwi::images.sh<a class="headerlink" href="#kiwi-images-sh" title="永久链接至标题">¶</a></h2>
+<div class="section" id="images-sh">
+<h3>images.sh 描述<a class="headerlink" href="#images-sh" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="kiwi-kiwirc">
+<h2>kiwi::kiwirc<a class="headerlink" href="#kiwi-kiwirc" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="chapter18.html" class="btn btn-neutral" title="第十八章：KIWI 加密支持" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 2015, Marcus Schäfer.
+      最后更新于 Jun 03, 2017.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.9',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
