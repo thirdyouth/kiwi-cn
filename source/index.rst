@@ -9,6 +9,8 @@ KIWI 文档
 
    OverView/OverView.rst
    Installation/Installation.rst
+   QuickStart/QuickStart.rst
+   BuildingImages/BuildingImages.rst
 
 镜像实例？
 =====================
