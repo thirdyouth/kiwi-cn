@@ -41,5 +41,5 @@ KIWI 可以通过不同的方式进行安装。对于本节，仅描述通过包
 
 .. code-block:: shell 
 
-   $ git clone https://github.com/SUSE/kiwi-descriptions
+   $ git clone https://github.com/SUSE/kiwi-descriptions 
 
