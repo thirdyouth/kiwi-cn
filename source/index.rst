@@ -8,6 +8,7 @@ KIWI 文档
    :maxdepth: 1
 
    OverView/OverView.rst
+   Installation/Installation.rst
 
 镜像实例？
 =====================
